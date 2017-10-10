@@ -9,6 +9,7 @@ module Fog
         attribute :volume_name,                :aliases => 'volumename'
         attribute :volume_id,                  :aliases => 'volumeid'
         attribute :created,                    :aliases => 'created'
+        attribute :job_id,                     :aliases => 'jobid'
         attribute :state,                      :aliases => 'state'
         attribute :account,                    :aliases => 'account'
         attribute :domain_id,                  :aliases => 'domainid'

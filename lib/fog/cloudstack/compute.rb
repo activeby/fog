@@ -56,9 +56,12 @@ module Fog
       request :create_ssh_key_pair
       request :create_snapshot
       request :create_snapshot_policy
+      request :create_template
       request :create_user
       request :create_volume
       request :create_zone
+      request :enable_account
+      request :disable_account
       request :delete_account
       request :delete_disk_offering
       request :delete_domain
@@ -78,6 +81,7 @@ module Fog
       request :enable_user
       request :generate_usage_records
       request :get_vm_password
+      request :get_vnc_console
       request :list_accounts
       request :list_alerts
       request :list_async_jobs
@@ -137,6 +141,7 @@ module Fog
       request :update_user
       request :update_resource_count
       request :update_virtual_machine
+      request :update_resource_limit
 
       class Real
 
@@ -150,6 +155,10 @@ module Fog
           @port                         = options[:cloudstack_port]    || 443
           @scheme                       = options[:cloudstack_scheme]  || 'https'
           @connection = Fog::XML::Connection.new("#{@scheme}://#{@host}:#{@port}#{@path}", options[:cloudstack_persistent], {:ssl_verify_peer => false})
+        end
+
+        def generic_connection(path, port = 80)
+          Fog::Core::Connection.new("#{@scheme}://#{@host}:#{port}#{path}", false, {:ssl_verify_peer => false})
         end
 
         def reload

@@ -18,6 +18,7 @@ module Fog
         attribute :host_name,                               :aliases => 'hostname'
         attribute :project_id,                              :aliases => 'projectid'
         attribute :zone_id,                                 :aliases => 'zoneid'
+        attribute :job_id,                                  :aliases => 'jobid'
         attribute :zone_name,                               :aliases => 'zonename'
         attribute :image_id,                                :aliases => ['templateid', :template_id]
         attribute :image_name,                              :aliases => ['templatename', :template_name]
@@ -49,10 +50,24 @@ module Fog
           nics.map{|nic| Address.new(nic)}
         end
 
+        def snapshots
+          volumes.map(&:snapshots).flatten
+        end
+
+        def volumes
+          service.volumes.all('virtualmachineid' => self.id)
+        end
+
         def destroy
           requires :id
           data = service.destroy_virtual_machine("id" => id)
           service.jobs.new(data["destroyvirtualmachineresponse"])
+        end
+
+        def reset_password
+          requires :id
+          data = service.reset_password_for_virtual_machine(id)
+          service.jobs.new(data['resetpasswordforvirtualmachineresponse'])
         end
 
         def flavor

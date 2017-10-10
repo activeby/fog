@@ -58,6 +58,10 @@ module Fog
           end
         end
 
+        def snapshots
+          service.snapshots.all('volumeid' => self.id)
+        end
+
         def reload
           requires :identity
 

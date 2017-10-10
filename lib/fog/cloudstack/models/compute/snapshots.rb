@@ -9,14 +9,15 @@ module Fog
 
         model Fog::Compute::Cloudstack::Snapshot
 
-        def all
-          data = service.list_snapshots["listsnapshotsresponse"]["snapshot"] || []
+        def all(options = {})
+          data = service.list_snapshots(options)["listsnapshotsresponse"]["snapshot"] || []
           load(data)
         end
 
         def get(snapshot_id)
-          snapshot = service.list_snapshots('id' => snapshot_id)["listsnapshotsresponse"]["snapshot"].first
-          new(snapshot) if snapshot
+          respond = service.list_snapshots('id' => snapshot_id)["listsnapshotsresponse"]["snapshot"]
+
+          new(respond.first) if respond
         end
       end
 

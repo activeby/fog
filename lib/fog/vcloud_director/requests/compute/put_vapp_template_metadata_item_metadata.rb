@@ -7,7 +7,7 @@ module Fog
         #
         # @param [String] id Object identifier of the vApp template.
         # @param [String] key Key of the metadata item.
-        # @param [Boolean,DateTime,Fixnum,String] value Value of the metadata
+        # @param [Boolean,DateTime,Integer,String] value Value of the metadata
         #   item.
         # @return [Excon::Response]
         #   * body<~Hash>:
@@ -27,7 +27,7 @@ module Fog
                 type = case value
                        when TrueClass, FalseClass then 'MetadataBooleanValue';
                        when DateTime then 'MetadataDateTimeValue';
-                       when Fixnum then 'MetadataNumberValue';
+                       when Integer then 'MetadataNumberValue';
                        else 'MetadataStringValue'
                        end
                 TypedValue('xsi:type' => type) { Value value }

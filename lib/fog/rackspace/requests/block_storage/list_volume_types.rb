@@ -9,7 +9,7 @@ module Fog
         #     * 'volume_types' [Array]: -
         #       * 'name' [String]: - name of volume type
         #       * 'extra_specs' [Hash]: -
-        #       * 'id' [Fixnum]: - id of volume type
+        #       * 'id' [Integer]: - id of volume type
         # @raise [Fog::Rackspace::BlockStorage::NotFound] - HTTP 404
         # @raise [Fog::Rackspace::BlockStorage::BadRequest] - HTTP 400
         # @raise [Fog::Rackspace::BlockStorage::InternalServerError] - HTTP 500

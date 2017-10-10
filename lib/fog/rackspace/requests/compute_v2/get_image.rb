@@ -12,10 +12,10 @@ module Fog
         #       * created [String] - created timestamp
         #       * id [String] - id of image
         #       * metadata [Hash] - image metadata
-        #       * minDisk [Fixnum]
-        #       * minRam [Fixnum]
+        #       * minDisk [Integer]
+        #       * minRam [Integer]
         #       * name [String] - name of image
-        #       * progress [Fixnum] - progress complete. Value is from 0 to 100.
+        #       * progress [Integer] - progress complete. Value is from 0 to 100.
         #       * status [String] - status of current image
         #       * updated [String] - updated timestamp
         #       * links [Array] - links to flavor

@@ -11,7 +11,7 @@ module Fog
         #       * 'display_description' [String]: - display description of snapshot
         #       * 'status' [String]: - status of snapshot
         #       * 'id' [String]: - id of snapshot
-        #       * 'size' [Fixnum]: - size of the snapshot in GB
+        #       * 'size' [Integer]: - size of the snapshot in GB
         #       * 'display_name' [String]: - display name of snapshot
         #       * 'created_at' [String]: - creation time of snapshot
         # @raise [Fog::Rackspace::BlockStorage::NotFound] - HTTP 404

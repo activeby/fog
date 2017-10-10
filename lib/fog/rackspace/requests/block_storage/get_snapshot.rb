@@ -13,7 +13,7 @@ module Fog
         #       * 'status' [String]: - snapshot status
         #       * 'os-extended-snapshot-attributes:project_id' [String]: -
         #       * 'id' [String]: - snapshot id
-        #       * 'size' [Fixnum]: - size of the snapshot in GB
+        #       * 'size' [Integer]: - size of the snapshot in GB
         #       * 'os-extended-snapshot-attributes:progress' [String]: -
         #       * 'display_name' [String]: - display name of snapshot
         #       * 'created_at' [String]: - creation time of snapshot

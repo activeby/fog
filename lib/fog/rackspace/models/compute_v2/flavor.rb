@@ -15,7 +15,7 @@ module Fog
         attribute :name
 
         # @!attribute [r] rame
-        # @return [Fixnum] ram in MB
+        # @return [Integer] ram in MB
         attribute :ram
 
         # @!attribute [r] disk
@@ -23,7 +23,7 @@ module Fog
         attribute :disk
 
         # @!attribute [r] vcpus
-        # @return [Fixnum] number of virtual CPUs
+        # @return [Integer] number of virtual CPUs
         attribute :vcpus
 
         # @!attribute [r] links

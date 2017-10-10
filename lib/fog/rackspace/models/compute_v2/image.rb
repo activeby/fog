@@ -39,7 +39,7 @@ module Fog
         attribute :tenant_id
 
         # @!attribute [r] progress
-        # @return [Fixnum] The build completion progress, as a percentage. Value is from 0 to 100.
+        # @return [Integer] The build completion progress, as a percentage. Value is from 0 to 100.
         attribute :progress
 
         attribute :minDisk

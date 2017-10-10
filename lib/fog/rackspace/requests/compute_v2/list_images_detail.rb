@@ -19,12 +19,12 @@ module Fog
         #         * id [String] - image id
         #         * links [Array] - image links
         #         * name [String] - image name
-        #         * minDisk [Fixnum] - image minimum disk required
-        #         * minRam [Fixnum] - image minimum ram required
+        #         * minDisk [Integer] - image minimum disk required
+        #         * minRam [Integer] - image minimum ram required
         #         * created [String] - image creation date (ISO 8601 format)
         #         * updated [String] - date of most recent image update
         #         * state [String] - image status (e.g. ACTIVE, SAVING, ERROR)
-        #         * progress [Fixnum] - image saving progress
+        #         * progress [Integer] - image saving progress
         #
         # @raise [Fog::Compute::RackspaceV2::NotFound] - HTTP 404
         # @raise [Fog::Compute::RackspaceV2::BadRequest] - HTTP 400

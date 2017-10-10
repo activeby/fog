@@ -215,7 +215,7 @@ module Fog
         #   @option params [Hash<Symbol, String>] :headers The default headers to supply in a request
         #   @option params [String] :host The destination host's reachable DNS name or IP, in the form of a String
         #   @option params [String] :path appears after 'scheme://host:port/'
-        #   @option params [Fixnum] :port The port on which to connect, to the destination host
+        #   @option params [Integer] :port The port on which to connect, to the destination host
         #   @option params [Hash]   :query appended to the 'scheme://host:port/path/' in the form of '?key=value'
         #   @option params [String] :scheme The protocol; 'https' causes OpenSSL to be used
         #   @return [Excon::Response]
@@ -224,7 +224,7 @@ module Fog
         # @overload request(method, path, expected_responses, params = {})
         #   @param [String] method HTTP method to use for the request
         #   @param [String] path   The absolute path for the request
-        #   @param [Array<Fixnum>] expected_responses HTTP response codes that have been successful
+        #   @param [Array<Integer>] expected_responses HTTP response codes that have been successful
         #   @param [Hash] params Keys and values for JSON
         #   @option params [String] :account_id The scoping account if required
         #   @deprecated #request with multiple arguments is deprecated
@@ -245,7 +245,7 @@ module Fog
         #
         # @param [String] method HTTP method to use for the request
         # @param [String] path   The absolute path for the request
-        # @param [Array<Fixnum>] expected_responses HTTP response codes that have been successful
+        # @param [Array<Integer>] expected_responses HTTP response codes that have been successful
         # @param [Hash]  parameters Keys and values for JSON
         # @option parameters [String] :account_id The scoping account if required
         #
@@ -260,7 +260,7 @@ module Fog
         #
         # @param [String] method HTTP method to use for the request
         # @param [String] path   The absolute path for the request
-        # @param [Array<Fixnum>] expected_responses HTTP response codes that have been successful
+        # @param [Array<Integer>] expected_responses HTTP response codes that have been successful
         # @param [Hash]  parameters Keys and values for JSON
         # @option parameters [String] :account_id The scoping account if required
         #

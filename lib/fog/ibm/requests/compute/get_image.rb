@@ -16,7 +16,7 @@ module Fog
         #     * 'createdTime'<~Integer>: time created in epoch time
         #     * 'supportedInstanceTypes'<~Array>: list of prices per image
         #       * 'pricePerQuantity'<~Integer>:
-        #       * 'effectiveDate'<~Fixnum>:
+        #       * 'effectiveDate'<~Integer>:
         #       * 'rate'<~Float>: price per unit
         #       * 'countryCode'<~String>:
         #       * 'unitOfMeasure'<~String>: unit of measurement

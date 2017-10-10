@@ -45,7 +45,7 @@ module Fog
 
         # Retrieve specific value for key from Metadata.
         # * If key is of type String, this method will return the value of the metadatum
-        # * If key is of type Fixnum, this method will return a Fog::Compute::RackspaceV2::Metadatum object (legacy)
+        # * If key is of type Integer, this method will return a Fog::Compute::RackspaceV2::Metadatum object (legacy)
         # @param [#key] key
         # @return [#value]
         def [](key)
@@ -57,7 +57,7 @@ module Fog
 
         # Set value for key.
         # * If key is of type String, this method will set/add the value to Metadata
-        # * If key is of type Fixnum, this method will set a Fog::Compute::RackspaceV2::Metadatum object (legacy)
+        # * If key is of type Integer, this method will set a Fog::Compute::RackspaceV2::Metadatum object (legacy)
         # @param [#key] key
         # @return [String]
         def []=(key, value)

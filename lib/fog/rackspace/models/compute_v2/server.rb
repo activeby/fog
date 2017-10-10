@@ -59,7 +59,7 @@ module Fog
         attribute :state_ext, :aliases => 'OS-EXT-STS:task_state'
 
         # @!attribute [r] progress
-        # @return [Fixnum] The build completion progress, as a percentage. Value is from 0 to 100.
+        # @return [Integer] The build completion progress, as a percentage. Value is from 0 to 100.
         attribute :progress
 
         # @!attribute [r] user_id

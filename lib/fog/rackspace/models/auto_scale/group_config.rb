@@ -18,11 +18,11 @@ module Fog
       	attribute :cooldown
 
         # @!attribute [r] min_entities
-        # @return [Fixnum] The minimum amount of units which should exist in the group
+        # @return [Integer] The minimum amount of units which should exist in the group
       	attribute :min_entities, :aliases => 'minEntities'
 
         # @!attribute [r] max_entities
-        # @return [Fixnum] The maximum amount of units which should exist in the group
+        # @return [Integer] The maximum amount of units which should exist in the group
       	attribute :max_entities, :aliases => 'maxEntities'
 
         # @!attribute [r] metadata

@@ -12,7 +12,7 @@ module Fog
         #       * id [String] - id of network
         #       * ip [Array]:
         #         * [Hash]:
-        #           * version [Fixnum] - version of the address
+        #           * version [Integer] - version of the address
         #           * addr [String] - ip address
         # @raise [Fog::Compute::RackspaceV2::NotFound] - HTTP 404
         # @raise [Fog::Compute::RackspaceV2::BadRequest] - HTTP 400

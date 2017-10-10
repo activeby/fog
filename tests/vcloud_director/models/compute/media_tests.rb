@@ -42,9 +42,9 @@ Shindo.tests('Compute::VcloudDirector | media', ['vclouddirector']) do
   end
 
   tests('Compute::VcloudDirector | media' ['attributes']) do
-    tests('#status').returns(Fixnum) { media.status.class }
+    tests('#status').returns(Integer) { media.status.class }
     tests('#image_type').returns(String) { media.image_type.class }
-    tests('#size').returns(Fixnum) { media.size.class }
+    tests('#size').returns(Integer) { media.size.class }
   end
 
   tests('Compute::VcloudDirector | media', ['get']) do

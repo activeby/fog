@@ -142,7 +142,7 @@ module Fog
         end
 
         def unmount_volume(volume_or_position)
-          if volume_or_position.kind_of? Fixnum
+          if volume_or_position.kind_of? Integer
             self.volumes.delete_at(volume_or_position)
             # assign to update attributes
             return self.volumes = self.volumes
@@ -194,7 +194,7 @@ module Fog
         end
 
         def remove_nic(mac_or_position)
-          if mac_or_position.kind_of? Fixnum
+          if mac_or_position.kind_of? Integer
             self.nics.delete_at(mac_or_position)
             # assign to update attributes
             return self.nics = self.nics

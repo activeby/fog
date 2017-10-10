@@ -23,15 +23,15 @@ module Fog
         attribute :name
 
         # @!attribute [r] change
-        # @return [Fixnum] The fixed change to the autoscale group's number of units
+        # @return [Integer] The fixed change to the autoscale group's number of units
         attribute :change
 
         # @!attribute [r] changePercent
-        # @return [Fixnum] The percentage change to the autoscale group's number of units
+        # @return [Integer] The percentage change to the autoscale group's number of units
         attribute :change_percent, :aliases => 'changePercent'
 
         # @!attribute [r] cooldown
-        # @return [Fixnum] The policy's cooldown
+        # @return [Integer] The policy's cooldown
         attribute :cooldown
 
         # @!attribute [r] type
@@ -65,7 +65,7 @@ module Fog
         attribute :args
 
         # @!attribute [r] desiredCapacity
-        # @return [Fixnum] The desired capacity of the group
+        # @return [Integer] The desired capacity of the group
         attribute :desired_capacity, :aliases => 'desiredCapacity'
 
         # Basic sanity check to make sure attributes are valid

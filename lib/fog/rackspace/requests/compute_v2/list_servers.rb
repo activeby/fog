@@ -8,7 +8,7 @@ module Fog
         #   * body [Hash]:
         #     * server [Hash]:
         #       * OS-DCF:diskConfig [String] - The disk configuration value.
-        #       * OS-EXT-STS:power_state [Fixnum] - The power state.
+        #       * OS-EXT-STS:power_state [Integer] - The power state.
         #       * OS-EXT-STS:task_state [String] - The task state.
         #       * OS-EXT-STS:vm_state [String] - The VM state.
         #       * accessIPv4 [String] - The public IP version 4 access address.
@@ -26,7 +26,7 @@ module Fog
         #       * links [Hash] - links to server
         #       * metadata [Hash] - server metadata
         #       * name [String] - name of server
-        #       * progress [Fixnum] - progress complete. Value is from 0 to 100.
+        #       * progress [Integer] - progress complete. Value is from 0 to 100.
         #       * rax-bandwidth:bandwidth [Array] - The amount of bandwidth used for the specified audit period.
         #       * status [String] - The server status.
         #       * tenant_id [String] - The tenant ID.

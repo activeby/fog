@@ -11,9 +11,9 @@ module Fog
         #         * id [String] - flavor id
         #         * links [Array] - flavor links
         #         * name [String] - flavor name
-        #         * ram [Fixnum] - flavor ram
-        #         * disk [Fixnum] - flavor disk
-        #         * vcpus [Fixnum] - flavor vcpus
+        #         * ram [Integer] - flavor ram
+        #         * disk [Integer] - flavor disk
+        #         * vcpus [Integer] - flavor vcpus
         # @raise [Fog::Compute::RackspaceV2::NotFound] - HTTP 404
         # @raise [Fog::Compute::RackspaceV2::BadRequest] - HTTP 400
         # @raise [Fog::Compute::RackspaceV2::InternalServerError] - HTTP 500

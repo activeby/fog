@@ -8,12 +8,12 @@ module Fog
         # @return [Excon::Response] response:
         #   * body [Hash]:
         #     * flavor [Hash]:
-        #       * disk [Fixnum] - disk size in GB
+        #       * disk [Integer] - disk size in GB
         #       * id [String] - id of flavor
         #       * name [String] - name of flavor
-        #       * ram [Fixnum] - amount of ram in MB
-        #       * swap [Fixnum] - amount of swap in GB
-        #       * vcpus [Fixnum] - number of virtual CPUs
+        #       * ram [Integer] - amount of ram in MB
+        #       * swap [Integer] - amount of swap in GB
+        #       * vcpus [Integer] - number of virtual CPUs
         #       * links [Array] - links to flavor
         # @raise [Fog::Compute::RackspaceV2::NotFound] - HTTP 404
         # @raise [Fog::Compute::RackspaceV2::BadRequest] - HTTP 400

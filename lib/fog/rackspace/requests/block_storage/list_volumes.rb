@@ -14,7 +14,7 @@ module Fog
         #       * 'status' [String]: - status of volume
         #       * 'id' [String]: - id of volume
         #       * 'attachments' [Array]: - array of hashes containing attachment information
-        #       * 'size' [Fixnum]: -  size of volume in GB (100 GB minimum)
+        #       * 'size' [Integer]: -  size of volume in GB (100 GB minimum)
         #       * 'snapshot_id' [String]: - optional snapshot from which to create a volume.
         #       * 'display_name' [String]: - display name of bolume
         #       * 'created_at' [String]: - volume creation time

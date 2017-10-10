@@ -20,8 +20,8 @@ Shindo.tests("Compute::VcloudDirector | vms", ['vclouddirector', 'all']) do
     tests("#status").returns(String){ vm.status.class }
     tests("#operating_system").returns(String){ vm.operating_system.class }
     tests("#ip_address").returns(String){ vm.ip_address.class }
-    tests("#cpu").returns(Fixnum){ vm.cpu.class }
-    tests("#memory").returns(Fixnum){ vm.memory.class }
+    tests("#cpu").returns(Integer){ vm.cpu.class }
+    tests("#memory").returns(Integer){ vm.memory.class }
     tests("#hard_disks").returns(Array){ vm.hard_disks.class }
   end
 
@@ -41,7 +41,7 @@ Shindo.tests("Compute::VcloudDirector | vms", ['vclouddirector', 'all']) do
     tests("#resource_type").returns(17){ hard_disk.resource_type }
     tests("#address_on_parent").returns(0){ hard_disk.address_on_parent }
     tests("#parent").returns(2){ hard_disk.parent }
-    tests("#capacity").returns(Fixnum){ hard_disk.capacity.class }
+    tests("#capacity").returns(Integer){ hard_disk.capacity.class }
     tests("#bus_sub_type").returns(String){ hard_disk.bus_sub_type.class }
     tests("#bus_type").returns(6){ hard_disk.bus_type }
   end
@@ -69,9 +69,9 @@ Shindo.tests("Compute::VcloudDirector | vms", ['vclouddirector', 'all']) do
     tests("#href").returns(String){ network.href.class }
     tests("#type").returns("application/vnd.vmware.vcloud.networkConnectionSection+xml"){ network.type }
     tests("#info").returns(String){ network.info.class }
-    tests("#primary_network_connection_index").returns(Fixnum){ network.primary_network_connection_index.class }
+    tests("#primary_network_connection_index").returns(Integer){ network.primary_network_connection_index.class }
     tests("#network").returns(String){ network.network.class }
-    tests("#network_connection_index").returns(Fixnum){ network.network_connection_index.class }
+    tests("#network_connection_index").returns(Integer){ network.network_connection_index.class }
     tests("#mac_address").returns(String){ network.mac_address.class }
     tests("#ip_address_allocation_mode").returns(String){ network.ip_address_allocation_mode.class }
     tests("#needs_customization").returns(true){ boolean? network.needs_customization }
